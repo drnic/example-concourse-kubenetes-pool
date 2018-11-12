@@ -1,4 +1,5 @@
 {
+  "project": "knative-experiments",
   "cluster_name": "knative",
   "cluster_zone": "us-west1-c",
   "cluster_region": "us-west1"
