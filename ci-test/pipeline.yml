@@ -4,6 +4,10 @@ meta:
   target:   (( param "Please identify the name of the target Concourse CI" ))
   url:      (( param "Please specify the full url of the target Concourse CI" ))
 
+  image:
+    name: starkandwayne/concourse
+    tag: latest
+
   git:
     email:  (( param "Please provide the git email for automated commits" ))
     name:   (( param "Please provide the git name for automated commits" ))
@@ -26,6 +30,20 @@ jobs:
         resource: gke-kubernetes-pool
         params:
           acquire: true
+      - task: kubectl-get-all-the-pods
+        config:
+            platform: linux
+            image_resource:
+              type: docker-image
+              source:
+                repository: (( grab meta.image.name ))
+                tag:        (( grab meta.image.tag ))
+            inputs:
+              - name: git
+              - name: kube
+            run:
+              path: ./git/ci/scripts/kubectl-get-all-the-pods.sh-test
+              args: []
     ensure:
       do:
         - put: gke-kubernetes-pool
