@@ -1,0 +1,17 @@
+---
+meta:
+  name:    drnic-kubernetes-pool-tester
+  target:  ohio-sw
+  url:     https://ci2.starkandwayne.com
+  team:    starkandwayne
+
+  git:
+    email:  ((git-commit-email))
+    name:   ((git-commit-name))
+
+  github:
+    owner:  drnic
+    repo:   kubenetes-pool
+    branch: master
+    private_key:  ((github-private-key))
+    access_token: ((github-access-token))
