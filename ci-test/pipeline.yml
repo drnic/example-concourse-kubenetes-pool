@@ -22,7 +22,6 @@ jobs:
     serial: true
     plan:
       - get: git
-        trigger: true
       - put: kube
         resource: gke-kubernetes-pool
         params:
