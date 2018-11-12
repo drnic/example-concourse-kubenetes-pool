@@ -23,6 +23,15 @@ jobs:
     plan:
       - get: git
         trigger: true
+      - put: kube
+        resource: gke-kubernetes-pool
+        params:
+          acquire: true
+    ensure:
+      do:
+        - put: gke-kubernetes-pool
+          params:
+            release: kube
 
 
 resources:
@@ -32,3 +41,11 @@ resources:
       uri:         (( grab meta.github.uri ))
       branch:      (( grab meta.github.branch ))
       private_key: (( grab meta.github.private_key ))
+
+  - name: gke-kubernetes-pool
+    type: pool
+    source:
+      uri: (( grab meta.github.uri ))
+      branch: master
+      private_key: (( grab meta.github.private_key ))
+      pool: gke
