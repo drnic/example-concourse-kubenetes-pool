@@ -5,7 +5,7 @@ meta:
   url:      (( param "Please specify the full url of the target Concourse CI" ))
 
   image:
-    name: starkandwayne/concourse
+    name: starkandwayne/concourse-kubernetes
     tag: latest
 
   git:
