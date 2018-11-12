@@ -1,24 +1,5 @@
-apiVersion: v1
-clusters:
-- cluster:
-    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURERENDQWZTZ0F3SUJBZ0lSQUloMktCNk9rRlg4UmZWU0JaT0Ryamt3RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa01tWmxNVEZoTkRVdFl6Z3dZeTAwWWpFNExUa3hZVE10TmpZNFltSXpPR05oWkdJNApNQjRYRFRFNE1URXhNVEl6TkRrd09Gb1hEVEl6TVRFeE1UQXdORGt3T0Zvd0x6RXRNQ3NHQTFVRUF4TWtNbVpsCk1URmhORFV0WXpnd1l5MDBZakU0TFRreFlUTXROalk0WW1Jek9HTmhaR0k0TUlJQklqQU5CZ2txaGtpRzl3MEIKQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBcGNHTFp3YVZ1Y2Z1ZjUyeHBiNEtwUDdSOVAzYkd4WUJkQkVtQnlLcgp2UWduQ01GTStTL1VtdTlxUGhkUm51WWw1WnYyMFNGT0drSWZYQllkQWpFOVRQVGtYV28xTHdnTlgvcjJJNXdzCmFqWEZPZi9PSEx4OUtVRDlxMGxFTXR4cDNhekVFTWlrWWxCQUhiWXU3MHJFRXJFamsxZG96bURXa3E1eExNT1UKTFB5VlQ2alBrampRMEVGdzJlYmozNHdvOGVYd2Q5cnpkWGFIWWdCTVJrd0JqSm0vdzIvVkRLR0hJRVRRa3NsWgp6WVMzTmJibnk4cVUvM0k2MlJIR1lWQWZmSHA2T0tXRWI0T1lMdFdFb21aRTRtUG1LekhjUWkvZCtjbmtZeEZ3CnRxVnZUYm9tWEJXS2hOQ0dhaWRYV3pXOEtXSStRQitzaHVncjN5bjRpUW80YVFJREFRQUJveU13SVRBT0JnTlYKSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBTkJna3Foa2lHOXcwQkFRc0ZBQU9DQVFFQQpIMFJiNUx6K0ptVGZqa3VwSnorUFBQSG55dEhFVHNqb29wanJ0L293MnZvVjJQaUthb1ZWK1ByRWFENVFoT0RpCmNQT3NXNGFQUkF6K2IvRzQzWjQ2YUgrZDEwTEN2ZUluVkJ6V3BCYjhidXg1ZzFTb3R2dmdjTDVUbzVtS3haaXEKdmkzNTczUnJBU2Z1eTdkMDR3cE40SzdHSllvRWIwQTBMTk8zYkF0NnBVRktDQ08vcGNqV2ZIaHpKOFZ2Z1ZpcApabXZtZytWYzI4NHdwZHZyWTRUOG13czVLYUxjVUVidTBGYjJtWmZEVlJoT05PbmFydjRkMzVadVF5dVR5aGZqCjVsTHo4UTE0akdlczd0a3N3RnA2MFBpN0owT0F2bHpjdHdwSGpGUXhEdkxScEd6c3AxU1dlNDRicm5YRk1VbnUKRlg0enB0SGt5YjlLNkpWcHVRNEZHUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
-    server: https://35.230.64.250
-  name: gke_knative-experiments_us-west1-c_knative
-contexts:
-- context:
-    cluster: gke_knative-experiments_us-west1-c_knative
-    user: gke_knative-experiments_us-west1-c_knative
-  name: gke_knative-experiments_us-west1-c_knative
-current-context: gke_knative-experiments_us-west1-c_knative
-kind: Config
-preferences: {}
-users:
-- name: gke_knative-experiments_us-west1-c_knative
-  user:
-    auth-provider:
-      config:
-        cmd-args: config config-helper --format=json
-        cmd-path: /Users/drnic/bin/google-cloud-sdk/bin/gcloud
-        expiry-key: '{.credential.token_expiry}'
-        token-key: '{.credential.access_token}'
-      name: gcp
+{
+  "cluster_name": "knative",
+  "cluster_zone": "us-west1-c",
+  "cluster_region": "us-west1"
+}
