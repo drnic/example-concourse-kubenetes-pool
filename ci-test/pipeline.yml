@@ -45,7 +45,7 @@ jobs:
               - name: git
               - name: kube
             run:
-              path: ./git/ci-test/scripts/kubectl-get-all-the-pods.sh
+              path: ./git/ci-test/scripts/gke-kubectl-get-all-the-pods.sh
               args: []
             params:
               K8S_CLUSTER_METADATA: kube
