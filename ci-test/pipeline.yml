@@ -42,7 +42,7 @@ jobs:
               - name: git
               - name: kube
             run:
-              path: ./git/ci/scripts/kubectl-get-all-the-pods.sh-test
+              path: ./git/ci-test/scripts/kubectl-get-all-the-pods.sh-test
               args: []
     ensure:
       do:
