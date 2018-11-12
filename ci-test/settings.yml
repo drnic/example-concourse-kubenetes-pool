@@ -11,7 +11,7 @@ meta:
 
   github:
     owner:  drnic
-    repo:   kubenetes-pool
+    repo:   example-concourse-kubenetes-pool
     branch: master
     private_key:  ((github-private-key))
     access_token: ((github-access-token))
