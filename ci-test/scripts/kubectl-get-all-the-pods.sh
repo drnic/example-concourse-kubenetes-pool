@@ -3,4 +3,4 @@
 set -eu
 
 export KUBECONFIG=$PWD/kube/metadata
-kube get all --all-namespaces
+kubectl get all --all-namespaces
